@@ -1,0 +1,18 @@
+USE BANK;
+
+create table account (
+id varchar(10)primary key,
+balance integer default 0,
+foreign key (id) references customer(id)
+);
+create table lone(
+id varchar(10)primary key,
+loneamount int default 100,
+ispaid boolean default false,
+account_id varchar(10),
+foreign key (account_id) references account(id)
+
+);
+select * from customer;
+insert into customer values('1','renad','re77@gmail.com','123','user');
+update customer set password='2030' where id='1';
